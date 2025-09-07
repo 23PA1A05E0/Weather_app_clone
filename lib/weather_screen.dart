@@ -32,8 +32,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   void initState() {
     super.initState();
-    textEditingController.text = location; // Set initial text
+    textEditingController.text = ""; // Set initial text
     getWeatherUpdate();
+  }
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
   }
 
   Future getWeatherUpdate() async {
@@ -58,6 +64,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     if (textEditingController.text.isNotEmpty) {
       setState(() {
         location = textEditingController.text; // Update location
+        textEditingController.clear();
       });
     }
   }
@@ -97,28 +104,35 @@ class _WeatherScreenState extends State<WeatherScreen> {
       body: Column(
         children: [
           // Search bar - outside FutureBuilder so it's always visible
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: TextField(
-              controller: textEditingController, // Use the declared controller
-              decoration: InputDecoration(
-                hintText: "Search",
-                hintStyle: TextStyle(color: Color.fromARGB(255, 248, 249, 249)),
-                prefixIcon: Icon(
-                  Icons.search_sharp,
-                  color: Color.fromARGB(255, 50, 51, 50),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: TextField(
+                  controller: textEditingController, // Use the declared controller
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    hintStyle: TextStyle(color: Color.fromARGB(255, 248, 249, 249)),
+                    prefixIcon: Icon(
+                      Icons.search_sharp,
+                      color: Color.fromARGB(255, 50, 51, 50),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.send),
+                      onPressed: _searchWeather, // Add search button
+                    ),
+                    filled: true,
+                    fillColor: Color.fromARGB(255, 65, 64, 64),
+                    focusedBorder: border,
+                    enabledBorder: border,
+                  ),
+                  onSubmitted: (value) => _searchWeather(), // Search on enter
                 ),
-                suffixIcon: IconButton(
-                  icon: Icon(Icons.send),
-                  onPressed: _searchWeather, // Add search button
-                ),
-                filled: true,
-                fillColor: Color.fromARGB(255, 65, 64, 64),
-                focusedBorder: border,
-                enabledBorder: border,
               ),
-              onSubmitted: (value) => _searchWeather(), // Search on enter
-            ),
+              Center(
+                child: Text(location,
+                style: TextStyle(fontSize: 25,fontWeight: FontWeight.w300),))
+            ],
           ),
           Expanded(
             // Use Expanded to take remaining space
