@@ -8,8 +8,8 @@ class AdditionalInfoItems extends StatelessWidget {
     super.key,
     required this.icon,
     required this.label,
-    required this.value 
-    });
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context) {

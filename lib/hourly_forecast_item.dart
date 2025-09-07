@@ -19,11 +19,15 @@ class HourlyShownCard extends StatelessWidget {
       child: Card(
         elevation: 10,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10), // Fixed: Use BorderRadius instead of BorderRadiusGeometry
+          borderRadius: BorderRadius.circular(
+            10,
+          ), // Fixed: Use BorderRadius instead of BorderRadiusGeometry
         ),
         surfaceTintColor: Colors.grey,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(5), // Fixed: Use BorderRadius instead of BorderRadiusGeometry
+          borderRadius: BorderRadius.circular(
+            5,
+          ), // Fixed: Use BorderRadius instead of BorderRadiusGeometry
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
@@ -31,8 +35,10 @@ class HourlyShownCard extends StatelessWidget {
                 Text(time),
                 SizedBox(height: 4),
                 Icon(
-                  icon, 
-                  color: icon == Icons.cloud ? Colors.grey : Colors.yellowAccent, // Conditional color
+                  icon,
+                  color: icon == Icons.cloud
+                      ? Colors.grey
+                      : Colors.yellowAccent, // Conditional color
                 ),
                 SizedBox(height: 4),
                 Text(value),
