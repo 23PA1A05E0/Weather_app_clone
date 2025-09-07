@@ -1,16 +1,39 @@
-# weather_app
+# 🌤️ Weather App
 
-A new Flutter project.
+A beautiful and responsive weather application built with Flutter that provides real-time weather information with an elegant user interface.
 
-## Getting Started
+![Flutter](https://img.shields.io/badge/Flutter-3.19.0-blue.svg)
+![Dart](https://img.shields.io/badge/Dart-3.3.0-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="./img2.png" alt="Weather App Preview" width="300"/>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **🌡️ Current Weather** - Real-time temperature and weather conditions
+- **📅 Hourly Forecast** - 24-hour weather predictions with time-based data
+- **🔍 City Search** - Search for weather in any city worldwide
+- **📊 Weather Details** - Comprehensive metrics including:
+  - Humidity levels
+  - Wind speed
+  - Atmospheric pressure
+- **🎨 Beautiful UI** - Clean Material Design with weather-appropriate colors
+- **🔄 Auto-Refresh** - Pull-to-refresh functionality
+- **📱 Responsive Design** - Optimized for mobile devices
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK (version 3.19.0 or higher)
+- Dart (version 3.3.0 or higher)
+- OpenWeatherMap API key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
