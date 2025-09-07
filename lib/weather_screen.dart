@@ -109,7 +109,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   color: Color.fromARGB(255, 50, 51, 50),
                 ),
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.search),
+                  icon: Icon(Icons.send),
                   onPressed: _searchWeather, // Add search button
                 ),
                 filled: true,
