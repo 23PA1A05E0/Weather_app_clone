@@ -36,5 +36,5 @@ A beautiful and responsive weather application built with Flutter that provides 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/23PA1A05E0/weather-app.git
    cd weather-app
