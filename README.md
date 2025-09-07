@@ -7,6 +7,7 @@ A beautiful and responsive weather application built with Flutter that provides 
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 <p align="center">
+  <img src="./img1.png" alt="Weather App Preview" width="300"/>
   <img src="./img2.png" alt="Weather App Preview" width="300"/>
 </p>
 
