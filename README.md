@@ -32,9 +32,3 @@ A beautiful and responsive weather application built with Flutter that provides 
 - Dart (version 3.3.0 or higher)
 - OpenWeatherMap API key
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/23PA1A05E0/weather-app.git
-   cd Weather_app_clone
